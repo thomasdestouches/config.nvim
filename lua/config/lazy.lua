@@ -38,14 +38,9 @@ vim.opt.rtp:prepend(lazypath)
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
     spec = {
-        { import = 'lazy_plugins' },
-    },
-    change_detection = {
-        notify = false,
+        { import = 'plugins' },
     },
     checker = {
         enabled = true,
     },
-}, {
-    ui = require 'lazy_ui',
 })

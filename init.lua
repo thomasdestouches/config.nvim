@@ -1,4 +1,4 @@
-require 'options'
-require 'remaps'
-require 'autocommands'
-require 'lazy_init'
+require 'config.options'
+require 'config.remaps'
+require 'config.autocommands'
+require 'config.lazy'
