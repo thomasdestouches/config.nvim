@@ -3,5 +3,15 @@ return {
     'folke/todo-comments.nvim',
     event = 'VimEnter',
     dependencies = { 'nvim-lua/plenary.nvim' },
-    opts = { signs = false },
+    opts = {
+        signs = false,
+    },
+    keys = {
+        {
+            '<leader>st',
+            ':TodoTelescope<CR>',
+            desc = '[S]earch [T]odo comments',
+        },
+        -- TODO: keybindings for jump_next & jump_previous?
+    },
 }
