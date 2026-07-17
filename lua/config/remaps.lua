@@ -20,8 +20,8 @@ vim.keymap.set({ 'n', 'v' }, '<leader>y', [["+y]])
 vim.keymap.set('n', '<leader>Y', [["+Y]])
 
 -- Move code
-vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
-vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
+-- vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
+-- vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 
 -- Escape insert mode with ':w' and ':q'
 vim.keymap.set('i', ':w', '<Esc>:w')

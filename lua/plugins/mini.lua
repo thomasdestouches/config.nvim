@@ -15,7 +15,7 @@ return {
         -- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
         -- - sd'   - [S]urround [D]elete [']quotes
         -- - sr)'  - [S]urround [R]eplace [)] [']
-        require('mini.surround').setup()
+        -- require('mini.surround').setup()
 
         -- Simple and easy statusline.
         --  You could remove this setup call if you don't like it,
@@ -28,7 +28,7 @@ return {
         -- default behavior. For example, here we set the section for
         -- cursor location to LINE:COLUMN
         statusline.section_location = function()
-            return '%2l:%-2v'
+            return '%2wl:%-w2v'
         end
 
         -- ... and there is more!

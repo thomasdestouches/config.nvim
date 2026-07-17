@@ -36,11 +36,14 @@ vim.opt.rtp:prepend(lazypath)
 --    :Lazy update
 --
 -- NOTE: Here is where you install your plugins.
-require('lazy').setup({
+require('lazy').setup {
     spec = {
         { import = 'plugins' },
     },
     checker = {
         enabled = true,
     },
-})
+    dev = {
+        path = '~/Documents/code/gits/',
+    },
+}
