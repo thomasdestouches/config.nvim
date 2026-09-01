@@ -200,6 +200,25 @@ return {
             -- tsserver = {},
             --
 
+            ruff = {
+                init_options = {
+                    settings = {
+                        args = {
+                            '--ignore=ERA,D,FBT002,UP031,SIM108,RUF100',
+                        },
+                        lint = {
+                            args = {
+                                '--ignore=ERA,D,FBT002,UP031,SIM108,RUF100',
+                            },
+                        },
+                        format = {
+                            args = {
+                                '--preview',
+                            },
+                        },
+                    },
+                },
+            },
             lua_ls = {
                 -- cmd = {...},
                 -- filetypes = { ...},
@@ -230,6 +249,7 @@ return {
         vim.list_extend(ensure_installed, {
             'stylua', -- Used to format Lua code
             'air', -- for R code
+            'ruff', -- Python linter/formatter matching pre-commit
         })
         require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 

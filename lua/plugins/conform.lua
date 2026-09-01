@@ -25,6 +25,7 @@ return { -- Autoformat
         end,
         formatters_by_ft = {
             lua = { 'stylua' },
+            python = { 'ruff_fix', 'ruff_format' },
             -- Conform can also run multiple formatters sequentially
             -- python = { "isort", "black" },
             --
@@ -32,6 +33,28 @@ return { -- Autoformat
             -- is found.
             -- javascript = { { "prettierd", "prettier" } },
             R = { 'air' },
+        },
+        formatters = {
+            ruff_fix = {
+                args = {
+                    'check',
+                    '--fix',
+                    '--ignore=ERA,D,FBT002,UP031,SIM108,RUF100',
+                    '--exit-zero',
+                    '--stdin-filename',
+                    '$FILENAME',
+                    '-',
+                },
+            },
+            ruff_format = {
+                args = {
+                    'format',
+                    '--preview',
+                    '--stdin-filename',
+                    '$FILENAME',
+                    '-',
+                },
+            },
         },
     },
 }

@@ -7,6 +7,15 @@ return {
       local lint = require 'lint'
       lint.linters_by_ft = {
         markdown = { 'markdownlint' },
+        python = { 'ruff' },
+      }
+
+      lint.linters.ruff.args = {
+        'check',
+        '--ignore=ERA,D,FBT002,UP031,SIM108,RUF100',
+        '--no-fix',
+        '--output-format=json',
+        '-',
       }
 
       -- To allow other plugins to add linters to require('lint').linters_by_ft,
