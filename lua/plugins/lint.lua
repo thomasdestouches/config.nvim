@@ -8,6 +8,8 @@ return {
       lint.linters_by_ft = {
         markdown = { 'markdownlint' },
         python = { 'ruff' },
+        javascript = { 'eslint_d' },
+        json = { 'jsonlint' },
       }
 
       lint.linters.ruff.args = {

@@ -33,8 +33,14 @@ return { -- Autoformat
             -- is found.
             -- javascript = { { "prettierd", "prettier" } },
             R = { 'air' },
+            javascript = { 'prettier' },
+            json = { 'prettier' },
+            jsonc = { 'prettier' },
         },
         formatters = {
+            prettier = {
+                prepend_args = { '--tab-width', '4' },
+            },
             ruff_fix = {
                 args = {
                     'check',

@@ -251,6 +251,9 @@ return {
             'air', -- for R code
             'ruff', -- Python linter/formatter matching pre-commit
             'markdownlint', -- Markdown linter used by nvim-lint
+            'eslint_d', -- JS linter used by nvim-lint
+            'jsonlint', -- JSON linter used by nvim-lint
+            'prettier', -- JS/JSON formatter used by conform
         })
         require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
