@@ -250,6 +250,7 @@ return {
             'stylua', -- Used to format Lua code
             'air', -- for R code
             'ruff', -- Python linter/formatter matching pre-commit
+            'markdownlint', -- Markdown linter used by nvim-lint
         })
         require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
